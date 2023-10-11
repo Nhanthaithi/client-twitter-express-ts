@@ -33,7 +33,7 @@ function RemoveTweetModal({
 }: IRemoveTweetModal) {
   const [open, setOpen] = useState<boolean>(false);
   const { user: userLogin } = useUser();
-  const { tweets, setTweets } = useTweets();
+  const { setTweets } = useTweets();
   const location = useLocation();
 
   const handleClose = () => {
