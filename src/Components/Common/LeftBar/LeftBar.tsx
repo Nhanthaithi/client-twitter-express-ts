@@ -1,4 +1,3 @@
-import React from "react";
 import TopLeftBar from "./TopLeftBar";
 import BottomLeftBar from "./BottomLeftBar";
 import "./LeftBar.css";

@@ -1,6 +1,3 @@
-// ChatHeader.tsx
-import React from "react";
-
 import { Images } from "../../Assets/images";
 
 const ChatHeader = () => (

@@ -1,5 +1,4 @@
 // Messages.tsx
-import React from "react";
 
 const Messages = () => {
   //   const messages = []; // This should come from props or API

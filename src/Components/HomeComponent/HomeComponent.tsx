@@ -1,6 +1,6 @@
 import "./HomeComponent.css";
 
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 
 import { useTweets } from "../../Context/TweetContext";
 import { getRelevantTweets } from "../../Utils/commonFunction";

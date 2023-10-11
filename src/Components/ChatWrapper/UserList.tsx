@@ -1,19 +1,9 @@
 // UserList.tsx
-import React from "react";
 import { Link } from "react-router-dom";
 
 import { Images } from "../../Assets/images";
 
 const UserList = () => {
-  //   interface IUser {
-  //     _id: string;
-  //     fullName: string;
-  //     userName: string;
-  //     avatar: string;
-  //     //   Thêm các trường như database
-  //   }
-
-  //   const users: IUser[] = []; // This should come from props or API
   return (
     <div className="user-list">
       {/* {users.length ? ( */}

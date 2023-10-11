@@ -1,5 +1,5 @@
 import jwtDecode from "jwt-decode";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Outlet, useNavigate } from "react-router-dom";
 
 import ExpNotify from "../ExpiNotify/ExpyNotify";

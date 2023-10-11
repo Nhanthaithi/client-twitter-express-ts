@@ -1,7 +1,7 @@
 import "./Register.css";
 
 import axios from "axios";
-import React, { ChangeEvent, FormEvent, useState } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { Link } from "react-router-dom";
 
 const Register = () => {
@@ -38,14 +38,7 @@ const Register = () => {
       // setMessage(response.data.message); // Set thông báo thành công
       // Chuyển hướng người dùng nếu cần
       window.location.href = "/";
-    } catch (error: {
-      errorEmail?: string;
-      errorPassword?: string;
-      errorFullname?: string;
-      errorUsername?: string;
-    }) {
-      // Ví dụ: hiển thị thông báo lỗi từ server
-      console.log(error);
+    } catch (error: any) {
       setErrorShow(error.response.data);
     }
   };

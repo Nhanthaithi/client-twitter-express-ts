@@ -1,6 +1,6 @@
 import "./TopLeftBar.css";
 
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { LuVerified } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { io } from "socket.io-client";
@@ -15,7 +15,7 @@ import { useTweets } from "../../../Context/TweetContext";
 import { fetchTweetsByUserId } from "../../../Utils/TweetFunction";
 
 const TopLeftBar = () => {
-  const userLogin = JSON.parse(localStorage.getItem("userLogin"));
+  const userLogin = JSON.parse(localStorage.getItem("userLogin") || "");
   const { resetTweets, setTweets } = useTweets();
   const [notificationCount, setNotificationCount] = useState(0);
 

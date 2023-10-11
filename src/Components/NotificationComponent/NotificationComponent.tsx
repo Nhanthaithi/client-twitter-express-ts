@@ -1,11 +1,10 @@
 import "./NotificationComponent.css";
 
 import moment from "moment";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import BaseAxios from "../../API/axiosConfig";
-import { Images } from "../../Assets/images";
 import { INotification } from "../../Types/type";
 
 const NotificationComponent = () => {

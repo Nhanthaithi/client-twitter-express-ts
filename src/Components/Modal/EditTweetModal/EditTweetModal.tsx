@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useEffect, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 
 import CloseIcon from "@mui/icons-material/Close";

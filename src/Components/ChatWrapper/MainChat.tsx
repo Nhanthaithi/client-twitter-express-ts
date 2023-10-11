@@ -1,7 +1,4 @@
-// MainChat.tsx
-import React from "react";
-
-import ChatHeader from "./Chatheader";
+import ChatHeader from "./ChatHeader";
 import InputArea from "./InputArea";
 import Messages from "./Messages";
 

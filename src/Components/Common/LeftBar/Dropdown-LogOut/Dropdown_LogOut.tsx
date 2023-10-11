@@ -1,6 +1,5 @@
 import "./DropDown_Logout.css";
 
-import React from "react";
 import { Link } from "react-router-dom";
 
 import { Button, DropdownMenu } from "@radix-ui/themes";
@@ -9,7 +8,6 @@ import { IDropdownBottomLefBar } from "../../../../Types/type";
 
 function Dropdown_LogOut({ currentUser }: IDropdownBottomLefBar) {
   const handleLogout = () => {
-    // 1. Xoá JWT khỏi localStorage (hoặc sessionStorage/cookies tùy theo bạn lưu ở đâu)
     window.location.href = "/";
   };
 

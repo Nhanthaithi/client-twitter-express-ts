@@ -10,7 +10,6 @@ import Picker from "@emoji-mart/react";
 const InputArea = () => {
   const [showEmojiPicker, setShowEmojiPicker] = useState<boolean>(false);
   const [message, setMessage] = useState("");
-  const [image, setImage] = useState<File | null>(null);
   const [previewImage, setPreviewImage] = useState<string | null>(null);
 
   const handleEmojiSelectChat = (emoji: { native: string }) => {
@@ -20,13 +19,11 @@ const InputArea = () => {
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files ? e.target.files[0] : null;
     if (file) {
-      setImage(file);
       setPreviewImage(URL.createObjectURL(file));
     }
   };
 
   const handleRemoveImage = () => {
-    setImage(null);
     setPreviewImage(null);
   };
 

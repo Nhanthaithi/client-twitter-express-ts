@@ -1,5 +1,3 @@
-import React from "react";
-
 import LeftBar from "../../Components/Common/LeftBar/LeftBar";
 import RightBar from "../../Components/Common/RightBar/RightBar";
 import HomeComponent from "../../Components/HomeComponent/HomeComponent";
