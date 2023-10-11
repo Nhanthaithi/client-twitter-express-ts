@@ -76,12 +76,6 @@ const Tweet: React.FC<ITweetProps> = (props) => {
     setLike(true);
     setLikesCount((prevCount) => prevCount + 1);
     await likeTweetById(tweetId);
-    // Gửi sự kiện 'like' tới máy chủ
-    // Ngay sau khi kết nối, gửi sự kiện 'user_connected'
-    //   socket.on("connect", function () {
-    //     const userId = userLogin._id; // thay 'yourUserId' bằng ID người dùng thực tế của bạn
-    //     socket.emit("like", { userId: userId, tweetId: tweet._id });
-    //   });
   };
 
   const handleUnLike = async (

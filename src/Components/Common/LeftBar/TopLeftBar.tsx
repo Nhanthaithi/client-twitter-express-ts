@@ -1,7 +1,6 @@
 import "./TopLeftBar.css";
 
 import { useEffect, useState } from "react";
-import { LuVerified } from "react-icons/lu";
 import { Link } from "react-router-dom";
 import { io } from "socket.io-client";
 
@@ -13,9 +12,11 @@ import PermIdentityOutlinedIcon from "@mui/icons-material/PermIdentityOutlined";
 
 import { useTweets } from "../../../Context/TweetContext";
 import { fetchTweetsByUserId } from "../../../Utils/TweetFunction";
+import { GoVerified } from "react-icons/go";
 
 const TopLeftBar = () => {
-  const userLogin = JSON.parse(localStorage.getItem("userLogin") || "");
+  const item = localStorage.getItem("userLogin");
+  const userLogin = item ? JSON.parse(item) : null;
   const { resetTweets, setTweets } = useTweets();
   const [notificationCount, setNotificationCount] = useState(0);
 
@@ -28,10 +29,10 @@ const TopLeftBar = () => {
 
     // Thay đổi địa chỉ máy chủ của bạn
     socket.on("notification", (data) => {
-      console.log("data socket", data.data.senderId);
+      console.log("data socket", data.receiverId);
       console.log("curent", userLogin?._id);
 
-      if (userLogin?._id !== data.data.senderId) {
+      if (userLogin._id == data.receiverId) {
         setNotificationCount((prevCount) => prevCount + 1);
       }
     });
@@ -92,7 +93,7 @@ const TopLeftBar = () => {
         </li>
         <li className="menu-item-sidebar">
           <Link to={`/verify`} className="menu ">
-            <LuVerified className="icon-menu" />{" "}
+            <GoVerified className="icon-menu" />{" "}
             <span className="menu-title">Verify</span>
           </Link>
         </li>
